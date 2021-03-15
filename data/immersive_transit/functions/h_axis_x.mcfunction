@@ -1,4 +1,3 @@
-#say HX
 #For iteration sake!
 scoreboard objectives add x_counter dummy
 #Grab the height of the portal and put it in our counter.

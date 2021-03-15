@@ -1,4 +1,3 @@
-#say HZ
 #For iteration sake!
 scoreboard objectives add z_counter dummy
 #Grab the height of the portal and put it in our counter.

@@ -1,4 +1,3 @@
-#say WY
 #For iteration sake!
 scoreboard objectives add y_counter dummy
 #Grab the width of the portal and put it in our counter.

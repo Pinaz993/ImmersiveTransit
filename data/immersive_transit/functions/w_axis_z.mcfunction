@@ -1,4 +1,3 @@
-#say WZ
 #For iteration sake!
 scoreboard objectives add z_counter dummy
 #Grab the width of the portal and put it in our counter.

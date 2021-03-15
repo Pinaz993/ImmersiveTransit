@@ -1,4 +1,3 @@
-#say WX
 #For iteration sake!
 scoreboard objectives add x_counter dummy
 #Grab the width of the portal and put it in our counter.
