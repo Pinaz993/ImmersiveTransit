@@ -1,0 +1,21 @@
+{
+  "schema_version": "imm_ptl:v1",
+  "from": ["imm_ptl:any_dimension"], 
+  "to": "immersive_portals:alternate5",
+  "form": {
+    "type": "imm_ptl:one_way", 
+	"frame_block": "minecraft:crying_obsidian",
+    "area_block": "minecraft:air",
+	"bi_faced": false
+  },
+  "trigger": { 
+	"type": "imm_ptl:use_item",
+	"item": "minecraft:nether_star",
+	"consume": true
+  },
+  "commands_on_generated":[
+    [
+      "/function immersive_transit:check_for_compass"
+	]
+  ]
+}
