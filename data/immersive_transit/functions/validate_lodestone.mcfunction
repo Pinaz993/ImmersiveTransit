@@ -1,6 +1,7 @@
 #"Lieutenant! Set portal for DEATH!" "Death, sir? That's not a location." "JUST DO IT!"
 portal set_portal_destination immersive_portals:alternate5 10000 -100 10000
 #"Portal set for DEATH, sir." "Very good, lieutenant."
+#TODO: Disallow inter-dimensional travel.
 #Does the closest player have a LodestoneTracked compass WITH a tracked position? (Compass will not have a tracked position if the lodestone has been broken.)
 execute store success storage immersive_transit:current_portal link_success.has_compass byte 1 run execute if data entity @p {Inventory:[{Slot:-106b,tag:{LodestonePos:{}}}]}
 #If they don't have the compass, let them know. TODO: Change system to tell player whether they're not holding a compass, or if the lodestone has been broken.
