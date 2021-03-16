@@ -1,6 +1,5 @@
 #Move the placeholder based on the height, width, and their respecive axes. The marker will end up such that the lodestone will be adjacent to the lower north-west corner block of the portal.
 #Or alternately, "A loop! A loop! My kingdom for a for-loop!"
-tellraw @a {"entity":"@e[tag=transit_placeholder]","nbt":"Pos"}
 execute if entity @s[nbt={axisHX:1.0d}] run function immersive_transit:h_axis_x
 execute if entity @s[nbt={axisHY:1.0d}] run function immersive_transit:h_axis_y
 execute if entity @s[nbt={axisHZ:1.0d}] run function immersive_transit:h_axis_z
@@ -22,3 +21,5 @@ portal complete_bi_way_bi_faced_portal
 fill ~15 ~15 ~15 ~-15 ~-15 ~-15 air replace immersive_portals:nether_portal_block
 #Get rid of the suprise tool.
 tag @s remove immersive_transit_current_portal
+#Let the player know that it worked.
+tellraw @p "Portal linked successfully."

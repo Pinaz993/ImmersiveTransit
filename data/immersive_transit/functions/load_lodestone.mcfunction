@@ -1,7 +1,7 @@
 #It's a suprise tool that will help us later.
 tag @s add immersive_transit_current_portal
 #Summon a placeholder that we can use to position the portal correctly.
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:true,Tags:["transit_placeholder"]}
+summon minecraft:armor_stand ~ ~ ~ {Marker:true,Invisible:true,Tags:["transit_placeholder"]}
 #Set the portal's destination to the marker, basically to its own coordinates.
 portal set_portal_destination_to @e[tag=transit_placeholder,limit=1]
 #Set the portal's destination to the coordinates and dimension in the compass, with the goal of loading the chunk the lodestone is in.

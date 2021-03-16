@@ -10,8 +10,7 @@
   },
   "trigger": { 
 	"type": "imm_ptl:use_item",
-	"item": "minecraft:nether_star",
-	"consume": true
+	"item": "minecraft:nether_star"
   },
   "commands_on_generated":[
     [
