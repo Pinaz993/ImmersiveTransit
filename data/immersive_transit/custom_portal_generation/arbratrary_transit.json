@@ -15,7 +15,7 @@
   },
   "commands_on_generated":[
     [
-      "/function immersive_transit:check_for_compass"
+      "/function immersive_transit:validate_lodestone"
 	]
   ]
 }
