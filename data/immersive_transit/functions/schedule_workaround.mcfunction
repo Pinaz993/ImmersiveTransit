@@ -1,0 +1,1 @@
+execute as @e[tag=immersive_transit_current_portal] at @s run function immersive_transit:link_arb_transit

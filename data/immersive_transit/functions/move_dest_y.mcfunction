@@ -1,5 +1,5 @@
 #Move the placeholder .5 in the positive Y direction.
-execute as @e[tag=transit_placeholder] at @e[tag=transit_placeholder] run tp @s ~ ~.5 ~
+execute as @e[tag=transit_placeholder] at @s run tp @s ~ ~.5 ~
 #Decriment the counter by one.
 scoreboard players remove immersive_transit y_counter 1
 #Loop unless the counter is at or below 0.
