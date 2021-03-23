@@ -15,10 +15,7 @@ kill @e[tag=transit_placeholder]
 #Make the current portal unbreakable.
 portal set_portal_nbt {unbreakable:true}
 #Complete the portal cluster.
-portal remove_connected_portals
 portal complete_bi_way_bi_faced_portal
-#Get rid of all the fake blocks placed by the original portal generation.
-fill ~15 ~15 ~15 ~-15 ~-15 ~-15 air replace immersive_portals:nether_portal_block
 #Get rid of the suprise tool.
 tag @s remove immersive_transit_current_portal
 #Let the player know that it worked.

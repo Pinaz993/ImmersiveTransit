@@ -6,7 +6,8 @@
     "type": "imm_ptl:one_way", 
 	"frame_block": "minecraft:crying_obsidian",
     "area_block": "minecraft:air",
-	"bi_faced": false
+	"bi_faced": false,
+	"breakable": false
   },
   "trigger": { 
 	"type": "imm_ptl:use_item",

@@ -22,7 +22,7 @@ execute if data storage immersive_transit:current_portal {link_success:{has_comp
 execute unless data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b,different_dimensions:0b,lodestone_linked:1b}} run portal eradicate_portal_cluster
 #If, however, they have followed instructions, eat the nether star (unless they're in creative or spectator) ...
 execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b,different_dimensions:0b,lodestone_linked:1b}} unless data entity @p {playerGameType:1} unless data entity @p {playerGameType:3} run clear @p minecraft:nether_star 1
-#... let them know...
+#... let them know... TODO: Make portal generation fail if there's already a portal there.
 tellraw @p "Portal linking commenced. Please stand by."
 #... and proceed to chunk-load the lodestone.
 execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b,different_dimensions:0b,lodestone_linked:1b}} run function immersive_transit:load_lodestone
