@@ -9,7 +9,7 @@ execute if data storage immersive_transit:current_portal {link_success:{has_comp
 execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b}} store success storage immersive_transit:current_portal link_success.has_lock byte 1 run execute if data entity @p {Inventory:[{Slot:-106b,tag:{LodestoneTracked:1b}}]}
 #If the compass isn't lodestone linked, let them know.
 execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:0b}} run tellraw @p "Portal linking failed. Compass not linked."
-#Is the compass pointing toward the same dimension as the portal? (Test for difference, then invert success)
+#Is the compass pointing toward the same dimension as the portal? (Test for difference, then insist on failure to continue)
 execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b}} run data modify storage immersive_transit:current_portal link_success.target_dimension set from entity @p Inventory[{Slot:-106b}].tag.LodestoneDimension
 execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b}} store success storage immersive_transit:current_portal link_success.different_dimensions byte 1 run data modify storage immersive_transit:current_portal link_success.target_dimension set from entity @p Dimension
 #If the player and the lodestone aren't in the same dimension, let them know.
@@ -18,13 +18,14 @@ execute if data storage immersive_transit:current_portal {link_success:{has_comp
 execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b,different_dimensions:0b}} store success storage immersive_transit:current_portal link_success.lodestone_linked byte 1 run execute if data entity @p {Inventory:[{Slot:-106b,tag:{LodestonePos:{}}}]}
 #If the lodestone isn't present, let them know.
 execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b,different_dimensions:0b,lodestone_linked:0b}} run tellraw @p "Portal linking failed. Compass was present, but no lodestone was found."
-#If they aren't ready, we're done here. Remove the portal and clean up.
+#FAILURE CONDITION
+#If they aren't ready, we're done here. Clean up the portal.
 execute unless data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b,different_dimensions:0b,lodestone_linked:1b}} run portal eradicate_portal_cluster
-#If, however, they have followed instructions, eat the nether star (unless they're in creative or spectator) ...
-execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b,different_dimensions:0b,lodestone_linked:1b}} unless data entity @p {playerGameType:1} unless data entity @p {playerGameType:3} run clear @p minecraft:nether_star 1
-#... let them know... TODO: Make portal generation fail if there's already a portal there.
-tellraw @p "Portal linking commenced. Please stand by."
+#SUCCESS CONDITION
+#If, however, they have followed instructions, let them know...
+execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b,different_dimensions:0b,lodestone_linked:1b}} run tellraw @p "Portal linking commenced. Please stand by."
 #... and proceed to chunk-load the lodestone.
 execute if data storage immersive_transit:current_portal {link_success:{has_compass:1b,has_lock:1b,different_dimensions:0b,lodestone_linked:1b}} run function immersive_transit:load_lodestone
 #Clean up our stored data.
 data remove storage immersive_transit:current_portal link_success
+#End of validation. Back to check_frame_for_portal.
