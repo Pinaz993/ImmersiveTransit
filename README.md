@@ -28,3 +28,7 @@ Requires [Immersive Portals](https://github.com/qouteall/ImmersivePortalsMod) [v
 6. If you wish, you can now remove both the lodestone and the crying obsidian. The portals will remain in place. I recommend that you place some sort of block in place of the crying obsidian as a frame, as the edges of the portals can look strange. Notice the grass in the picture. ![Border](https://user-images.githubusercontent.com/4016145/112736339-5f950e80-8f28-11eb-93c2-64f143c8c29e.png)
 
 7. Remember that as the portal appears in the middle of the block space on both ends, any block adjacent to the portal will appear to be split in half. You can embrace the strange half-block astetic, or choose to place the same kind of block on both sides. I chose to get rid of the hard line.![Complete](https://user-images.githubusercontent.com/4016145/112736407-b569b680-8f28-11eb-82af-7db58c7eb99d.png)
+
+### How to break a portal:
+
+This is much simpler than setting one up. Rename a block (or stack) of TNT to "GateBuster" (no quotation marks), and toss it on the ground in item form near the portal you want to break. Then, throw an experiance bottle at it. They'll disapear in a colorful explosion, taking both sides of the portal with them.![breaking](https://user-images.githubusercontent.com/4016145/112736847-37a7aa00-8f2c-11eb-855f-5c04b91b0734.png)
