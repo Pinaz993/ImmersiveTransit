@@ -31,4 +31,5 @@ Requires [Immersive Portals](https://github.com/qouteall/ImmersivePortalsMod) [v
 
 ### How to break a portal:
 
-This is much simpler than setting one up. Rename a block (or stack) of TNT to "GateBuster" (no quotation marks), and toss it on the ground in item form near the portal you want to break. Then, throw an experiance bottle at it. They'll disapear in a colorful explosion, taking both sides of the portal with them.![breaking](https://user-images.githubusercontent.com/4016145/112736847-37a7aa00-8f2c-11eb-855f-5c04b91b0734.png)
+This is much simpler than setting one up. Rename a block (or stack) of TNT to "GateBuster" (no quotation marks), and toss it on the ground in item form near the portal you want to break. Then, throw an experiance bottle at it. They'll disapear in a colorful explosion, taking both sides of the portal with them, and leaving a single nether star.![breaking](https://user-images.githubusercontent.com/4016145/112736847-37a7aa00-8f2c-11eb-855f-5c04b91b0734.png)![refund](https://user-images.githubusercontent.com/4016145/113190054-e8ae8d00-9229-11eb-96bc-b81d32ed71dd.png)
+
