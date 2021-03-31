@@ -14,4 +14,4 @@ data remove storage immersive_transit:current_portal already_portal_at_destinati
 tag @s remove immersive_transit_current_portal
 #Get rid of the placeholder.
 kill @e[tag=transit_placeholder]
-#End of check. Back to schedule_workaround.
+#End of check. Back to schedule_workaround.tran

@@ -12,6 +12,10 @@ portal set_portal_destination_to @e[tag=transit_placeholder,limit=1]
 portal set_portal_nbt {unbreakable:true}
 #Complete the portal cluster.
 portal complete_bi_way_bi_faced_portal
+#Mark the portal entities on both sides so that they qualify for gate-bustification
+tag @s add immersive_transit_gate_bustable
+tag @e[type=immersive_portals:portal,dx=1,dy=1,dz=1] add immersive_transit_gate_bustable
+execute at @e[tag=transit_placeholder] run tag @e[type=immersive_portals:portal,dx=1,dy=1,dz=1] add immersive_transit_gate_bustable
 #Eat the nether star (unless they're in creative or spectator).
 execute unless data entity @p {playerGameType:1} unless data entity @p {playerGameType:3} run clear @p minecraft:nether_star 1
 #Let the player know that it worked.
