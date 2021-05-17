@@ -15,8 +15,8 @@ data modify storage immersive_transit:current_portal lodestone_position set valu
 execute store result storage immersive_transit:current_portal lodestone_position[0] double 1 run data get entity @p Inventory[{Slot:-106b}].tag.LodestonePos.X
 execute store result storage immersive_transit:current_portal lodestone_position[1] double 1 run data get entity @p Inventory[{Slot:-106b}].tag.LodestonePos.Y
 execute store result storage immersive_transit:current_portal lodestone_position[2] double 1 run data get entity @p Inventory[{Slot:-106b}].tag.LodestonePos.Z
-#Overite the corrdinate array in the placeholder with our constructed array, thus effectively teleporting the placeholder to the lodestone in one step. 
-#This methiod is prone to client server desyncs and other buggyness, but this is all we got without resorting to scarpet or other mods.
+#Ovewrite the corrdinate array in the placeholder with our constructed array, thus effectively teleporting the placeholder to the lodestone in one step. 
+#This methiod is prone to client-server desyncs and other buggyness, but this is all we have without resorting to scarpet or other mods.
 data modify entity @e[tag=transit_placeholder,limit=1] Pos set from storage immersive_transit:current_portal lodestone_position
 #After time has been given to load the chunks, procede to locate and link up the cluster. (This starts a new function chain.)
 schedule function immersive_transit:schedule_workaround 70t replace

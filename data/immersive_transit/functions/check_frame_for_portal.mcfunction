@@ -10,4 +10,4 @@ execute if data storage immersive_transit:current_portal {portal_in_frame_alread
 execute unless data storage immersive_transit:current_portal {portal_in_frame_already:1b} run function immersive_transit:validate_lodestone
 #Regardless of the result, clean up.
 data remove storage immersive_transit:current_portal portal_in_frame_already
-#End of check. End of command function chain.
+#End of check. End of function chain.

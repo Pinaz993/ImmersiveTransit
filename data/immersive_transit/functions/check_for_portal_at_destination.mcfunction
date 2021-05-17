@@ -10,8 +10,8 @@ execute if data storage immersive_transit:current_portal {already_portal_at_dest
 execute if data storage immersive_transit:current_portal {already_portal_at_destination:0b} run function immersive_transit:link_arb_transit
 #Regardless of the result, clean up the data we used.
 data remove storage immersive_transit:current_portal already_portal_at_destination
-#Get rid of the suprise tool.
+#Get rid of the suprise tool. Will fail silently if the portal has already been destroyed, but that's not worth caring about.
 tag @s remove immersive_transit_current_portal
 #Get rid of the placeholder.
 kill @e[tag=transit_placeholder]
-#End of check. Back to schedule_workaround.tran
+#End of check. Back to schedule_workaround
